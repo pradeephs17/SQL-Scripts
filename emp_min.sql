@@ -1,1 +1,1 @@
-select * from(select *,min(sal)over(partition by deptno)as rnk from empnew)m
+select * from(select *,min(sal)over(order by sal desc)as rnk from empnew)m
